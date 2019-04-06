@@ -1,8 +1,56 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+    margin: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
+}
+
+#masthead {
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    padding: 2vh 0;
+    background-color: #29356e;
+}
+
+#masthead h1 {
+    position: relative;
+    margin: auto;
+    width: fit-content;
+    color: #fff;
+    font-size: 3.5em;
+}
+
+#content{
+    position: relative;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.login_inp{
+    width: 15em;
+    padding: 10px;
+    margin: 10px;
+}
+
+#login_btn{
+    display: block;
+    position: relative;
+    width: 10em;
+    padding: 5px;
+    margin: 10px auto;
+    background-color: #3e456e;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+#login_btn:hover{
+    background-color: #29356e;
+}
+
+p{
+    text-align: center;
 }
