@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create account</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body>
+<header id="masthead">
+    <h1>Careers720</h1>
+</header>
+<h1>Create account</h1>
+<div id="content">
+    <form method="post" action="/signup" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Name" class="login_inp" />
+        <br>
+        <input type="text" name="username" placeholder="Username" class="login_inp" />
+        <% if (sessData.usernameExists){ %>
+            <span style="color: red">Username already exists. Please try another username.</span>
+        <% } %>
+        <br>
+        <input type="email" name="email" placeholder="E-mail ID" class="login_inp" />
+        <br>
+        <input type="password" name="password" placeholder="Password" class="login_inp" />
+        <br>
+        <label for="pic">Upload profile picture</label>
+        <input type="file" id="pic" name="profile_pic" class="login_inp" />
+        <br>
+        <label>Your qualification:</label>
+        <select name="qualification">
+            <option value="grad">Graduate</option>
+            <option value="postgrad">Post graduate</option>
+            <option value="diploma">Diploma</option>
+            <option value="phd">Doctorate</option>
+        </select>
+        <br>
+        <textarea name="skills" class="login_inp" placeholder="Enter your skills separated by commas"></textarea>
+        <input type="submit" value="Create account" id="login_btn" />
+    </form>
+</div>
+</body>
+</html>

@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
   <title>Careers720 - Smarter way to find your career</title>
   <link rel="stylesheet" href="./stylesheets/style.css">
@@ -11,16 +10,20 @@
   </header>
   <div id="content">
     <form method="post" action="/login">
-      <input type="text" name="username" placeholder="Username" class="login_inp"/>
+      <input type="text" name="username" placeholder="Username" class="login_inp" />
       <br>
-      <input type="password" name="password" placeholder="Password" class="login_inp"/>
+      <input type="password" name="password" placeholder="Password" class="login_inp" />
       <br>
+      <% if(loginFail){ %>
+        <p style="color:red">Login failed! Check your username or password.</p>
+        <br>
+      <% } %>
       <input type="submit" value="Log in" id="login_btn" />
     </form>
     <br>
     <p>or</p>
     <br>
-    <p><a href="#">Create account</a></p>
+    <p><a href="./createAccount">Create account</a></p>
   </div>
 </body>
 

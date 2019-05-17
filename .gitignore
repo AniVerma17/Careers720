@@ -1,3 +1,5 @@
 .idea
 node_modules
 Careers720.iml
+/public/profileimages
+app_database.db

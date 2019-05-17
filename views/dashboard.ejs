@@ -1,8 +1,48 @@
 <html lang="en">
 <head>
     <title>Dashboard - Careers720</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <style>
+        #masthead h1{
+            font-size: 2em;
+            margin: 0;
+        }
+        #masthead a{
+            position: absolute;
+            bottom: 3.5vh;
+            right: 2vw;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        #masthead a:hover{
+            text-decoration: underline;
+        }
+        #dash_sidebar h2{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center">Under construction</h1>
+<header id="masthead">
+    <h1>Careers720</h1>
+    <a href="/logout">Logout</a>
+</header>
+<section id="dash_container">
+    <section id="dash_sidebar">
+        <img src="<%= userData.profile_picture %>"  alt="Profile picture"/>
+        <br>
+        <h2><%= userData.name%></h2>
+        <br>
+        <p>Current profile score: <%= userData.profile_score %></p>
+        <br>
+    </section>
+    <section id="dash_posts">
+        <h2>Open job posts</h2>
+        <br>
+        <% posts.forEach((post) => { %>
+            <%- include('cardview', {jobItem: post}); %>
+        <% }); %>
+    </section>
+</section>
 </body>
 </html>

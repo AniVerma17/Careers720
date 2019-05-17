@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-family: "Arial", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -9,9 +9,8 @@ a {
 
 #masthead {
     position: relative;
-    width: 100vw;
     height: fit-content;
-    padding: 2vh 0;
+    padding: 2vh;
     background-color: #29356e;
 }
 
@@ -53,4 +52,37 @@ a {
 
 p{
     text-align: center;
+}
+
+#dash_container{
+    display: flex;
+    min-height: 100vh;
+}
+
+#dash_sidebar{
+    background-color: #8287a8;
+    padding: 2em;
+}
+
+#dash_sidebar img{
+    height: 30vmin;
+    width: 30vmin;
+    margin-bottom: 1em;
+    border-radius: 15vmin;
+}
+
+#dash_posts{
+    padding: 3em;
+}
+
+.card{
+    background-color: #fbfbff;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px 0 #454545;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.card p{
+    text-align: left;
 }

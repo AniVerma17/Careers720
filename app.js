@@ -22,6 +22,10 @@ app.use(session({
     cookie: {sameSite: true},
     unset: 'destroy'
 }));
+app.use(function (req, res, next) {
+    res.locals.sessData = req.session;
+    next();
+});
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
